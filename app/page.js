@@ -7,7 +7,7 @@ function Week2Link() {
 
 export default function Page() {
   return (
-    <section>
+    <main>
       <div>
         <h1 className = "text-4xl">CPRG 306: Web Development 2 - Assignments</h1>
       </div>
@@ -19,7 +19,7 @@ export default function Page() {
       <div>
         <Week2Link/>
       </div>
-    </section>
+    </main>
   );
 }
 
