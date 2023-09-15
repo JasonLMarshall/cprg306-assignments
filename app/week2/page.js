@@ -6,7 +6,7 @@ function Shopping() {
 
 export default function Week2() {
     return (
-      <section>
+      <main>
         <div>
           <Shopping/>
         </div>
@@ -14,8 +14,6 @@ export default function Week2() {
         <div>
           <StudentInfo/>
         </div>
-  
-        
-      </section>
+      </main>
     );
   }
