@@ -9,7 +9,7 @@ export default function Page() {
   return (
     <section>
       <div>
-        <h1>CPRG 306: Web Development 2 - Assignments</h1>
+        <h1 className = "text-4xl">CPRG 306: Web Development 2 - Assignments</h1>
       </div>
 
       <div>
