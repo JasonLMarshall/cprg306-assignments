@@ -1,3 +1,5 @@
+// this component gets called by ItemList component from item-list.js
+
 export default function Item({name, quantity, category}) {
     return (
         <ul className="border border-sky-500 bg-blue-900 w-96 m-4 p-2 rounded-xl" >

@@ -75,10 +75,13 @@ export default function ItemList() {
         category: "household",
       };
       
+      // "Item" below refers to Item Component from item.js 
+      // the above item object property values are passed to the Item component to render each item
+      // 
       return (
         <>
 
-            <Item
+            <Item                           // "Item" is a call to the component on item.js
                 name={item1.name}
                 quantity={item1.quantity}
                 category={item1.category}
