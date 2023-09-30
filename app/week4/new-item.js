@@ -22,7 +22,7 @@ export default function NewItem() {
     console.log(item);
 
     
-    alert("Added Item: " + name + ", quantity: " + quantity + ", category: " + category)
+    alert("Added item: " + name + ", Quantity: " + quantity + ", Category: " + category)
 
     
     setName("");
@@ -46,24 +46,24 @@ export default function NewItem() {
 
     return (
         <div>
-            <div className="min-h-screen bg-blue-gray-100 flex items-center justify-center">               
+            <div className="min-h-screen bg-blue-gray-100 mt-10 flex items-top justify-center">               
                 <div>
                 
-                    <form onSubmit={handleSubmit}>
+                    <form class="m-10 max-w-sm w-full"onSubmit={handleSubmit}>
                         
-                        <div className="block mb-4">                            
+                        <div className="block mb-3 w-full rounded-md text-black bg-gray-100 focus:bg-white">                            
                             <input
                                 type = "text"
                                 placeholder = "Item name"
                                 required
                                 onChange = {handleNameChange}
                                 value = {name}
-                                className="mt-1 p-2 block w-full rounded-md text-black bg-gray-100 focus:bg-white"
+                                className=" block p-2 w-full rounded-md text-black bg-gray-100 focus:bg-white"                                 
                             />
                         </div>
 
                         
-                        <div className="block mb-4">                            
+                        <div className="flex justify-between">                            
                             <input
                                 type = "number"
                                 min = "1"
@@ -71,14 +71,10 @@ export default function NewItem() {
                                 required
                                 onChange = {handleQuantityChange}
                                 value = {quantity}
-                                className="mt-1 p-2 block w-full rounded-md text-black bg-gray-100 focus:bg-white"
-                            />                        
-                        </div>
+                                className="w-20 p-2 block rounded-md text-black bg-gray-100 focus:bg-white"
+                            />
 
-                        
-                        <div className="block mb-4">
-                            
-                            <select className = "mt-1 p-2 block w-full rounded-md text-black bg-gray-100 focus:bg-white" value={category} onChange={handleCategoryChange}>                               
+                            <select className = "ml-6 p-2 block w-full rounded-md text-black bg-gray-100 focus:bg-white" value={category} onChange={handleCategoryChange}>                               
                                                           
                                 <option value = "produce">Produce</option>
                                 <option value = "dairy">Dairy</option>
@@ -92,11 +88,12 @@ export default function NewItem() {
                                 <option value = "household">Household</option>
                                 <option value = "other">Other</option>
                                 
-                            </select>                        
+                            </select>     
+
                         </div>
 
-
-                        <button type="submit" className="w-full py-2 px-4 bg-blue-500 hover:bg-blue-700 rounded-md text-white">+</button>
+                        
+                        <button type="submit" className="mt-3 w-full py-2 px-4 bg-blue-500 hover:bg-blue-700 rounded-md text-white font-bold">+</button>
                     
 
                     </form> 
