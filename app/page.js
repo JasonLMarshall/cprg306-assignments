@@ -13,7 +13,9 @@ function Week4Link() {
   return <Link href= "./week4">Week 4</Link>
 }
 
-
+function Week5Link() {
+  return <Link href= "./week5">Week 5</Link>
+}
 
 export default function Page() {
   return (
@@ -36,6 +38,10 @@ export default function Page() {
 
       <div>
         <Week4Link/>
+      </div>
+
+      <div>
+        <Week5Link/>
       </div>
 
     </main>
