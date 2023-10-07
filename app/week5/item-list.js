@@ -44,6 +44,7 @@ export default function ItemList() {
           quantity={item.quantity}
           category={item.category}
           id={item.id}
+          key = {item.id}
         />
       ))}
     
