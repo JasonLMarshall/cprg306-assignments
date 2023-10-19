@@ -2,18 +2,25 @@
 
 import { useState } from "react";
 import Item from "./item";
-import itemsData from "./items.json";
 
 
-export default function ItemList() {
+export default function ItemList({items}) {
   const [sortBy, setSortBy] = useState ("name");
-
+ 
   
-  let items = itemsData;
-    
-  items = (sortBy === "name") ? items.sort((a, b) => a.name.localeCompare(b.name)) : items.sort((a, b) => a.category.localeCompare(b.category));
-    
-  const handleNameSorted = () => {
+ 
+const itemsCopy = items;
+
+itemsCopy.sort((a, b) => {
+  if (sortBy === "name") {
+    return a.name.localeCompare(b.name);
+  } else {
+    return a.category.localeCompare(b.category);
+  }
+});
+
+
+const handleNameSorted = () => {
     setSortBy("name");
   };
     
@@ -40,7 +47,7 @@ export default function ItemList() {
   return (
     <>
 
-      <div>
+      <div class = "mt-8">
         <label for="sort"className = "m-2 p-2">Sort by:</label>
       </div>
 
@@ -52,13 +59,13 @@ export default function ItemList() {
         <button type = "submit" className = {`m-4 w-25 p-2 ${sortBy === "groupedByCategory" ? "bg-orange-700" : "bg-orange-400"}  rounded-md text-white font-bold`}>Grouped by Category</button>
       </div>
             
-      {items.map((item) => (
+      {itemsCopy.map((item) => (
         <Item
           name={item.name}
           quantity={item.quantity}
           category={item.category}
           id={item.id}
-          key = {item.id}     //???
+          key = {item.id}
         />
       ))}
     

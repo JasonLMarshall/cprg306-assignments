@@ -1,4 +1,3 @@
-// this component gets called by ItemList component from item-list.js
 
 export default function Item({name, quantity, category, id}) {
     return (
