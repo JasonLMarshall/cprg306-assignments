@@ -69,6 +69,7 @@ export default function ItemList({items}) {
 
 
 // ****Original code with no groupedByCategory functionality****
+
 // "use client";
 
 // import { useState } from "react";
