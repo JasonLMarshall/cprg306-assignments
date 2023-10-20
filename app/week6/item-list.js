@@ -49,9 +49,12 @@ export default function ItemList({items}) {
             
       {displayItems.map((itemOrCategory, index) => {
         // If it's a string, then it's a category
-        if (typeof itemOrCategory === 'string') {
+        if (typeof itemOrCategory === 'string') 
+        {
           return <div key={index} className="capitalize text-xl font-bold text-slate-200 mt-4 pl-4">{itemOrCategory}</div>;
-        } else {
+        } 
+        else 
+        {
           return (
             <Item
               name={itemOrCategory.name}
